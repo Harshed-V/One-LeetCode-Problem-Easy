@@ -1,18 +1,18 @@
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> Result = new ArrayList<>();   //For output a new Array List has been Created
-        PostOrder(root, Result);           //for PostOrder Traversal            
+        PreOrder(root, Result);           //for PostOrder Traversal            
         return Result;
-    }public void PostOrder(TreeNode node, List<Integer> Result){
+    }public void PreOrder(TreeNode node, List<Integer> Result){
         if(node == null) return;
         Result.add(node.val);             //Stores in Result ArrayList
-        PostOrder(node.left, Result);       //finds leftmost node using recursion    
-        PostOrder(node.right, Result);      //finds rightmost node using recursion
+        PreOrder(node.left, Result);       //finds leftmost node using recursion    
+        PreOrder(node.right, Result);      //finds rightmost node using recursion
     }
 }
 //End
 //Main class Below
-public class BinaryTreePostorderTraversal {
+public class BinaryTreePreorderTraversal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String inputLine = sc.nextLine();
