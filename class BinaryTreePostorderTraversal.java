@@ -6,8 +6,8 @@ class Solution {
     }public void PostOrder(TreeNode node, List<Integer> Result){
         if(node == null) return;
         Result.add(node.val);             //Stores in Result ArrayList
-        InOrder(node.left, Result);       //finds leftmost node using recursion    
-        InOrder(node.right, Result);      //finds rightmost node using recursion
+        PostOrder(node.left, Result);       //finds leftmost node using recursion    
+        PostOrder(node.right, Result);      //finds rightmost node using recursion
     }
 }
 //End
