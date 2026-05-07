@@ -1,10 +1,10 @@
 import java.util.*;
 
-
 class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList<>();
-        if (numRows <= 0) return result;
+        if (numRows <= 0) 
+            return result;
 
         //for intial always 1 at top of Pascal's Triangle
         result.add(new ArrayList<>(Arrays.asList(1)));
